@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic");
+@import url("reset.css");
+
+.handymail_form, #handymail_form_message, #handymail_form_message p, .handymail_form p {
+    font-size: .75rem;
+    font-family: "Open Sans", sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.handymail_form {
+    color: #848484;
+}
+
+.handymail_form:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.handymail_form input, .handymail_form textarea {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.handymail_form .g-recaptcha {
+    margin-top: 2rem;
+    margin-left: -1.777rem;
+    box-sizing: border-box;
+}
+
+/* FIELDSET */
+
+.handymail_form .handymail_fieldset_label {
+    background: #4183d7;
+    color: white;
+    display:block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-left: 2px solid #4183d7;
+    border-right: 2px solid #4183d7;
+    width: 100%;
+    border-top-left-radius: 0.1875rem;
+    border-top-right-radius: 0.1875rem;
+}
+
+.handymail_form fieldset:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+.handymail_form .handymail_fieldset {
+    background: #ECF0F1;
+    padding-top: 1.777rem;
+    padding-bottom: 2rem;
+    border-radius: 0.1875rem;
+    box-sizing: border-box;
+}
+
+/* FIELDSET END */
+
+/* FIELD BLOCK */
+
+.handymail_fieldblock {
+    margin-left: 1.777rem;
+    margin-right: 1.777rem;
+    
+}
+
+.handymail_fieldblock > label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: .75rem;
+    font-size:.75rem;
+}
+
+.handymail_fieldblock:not(:first-of-type) {
+    margin-top: 1.777rem;
+}
+
+
+/* TEXTAREA */
+
+.handymail_form textarea {
+    resize: none;
+}
+/* -- */
+
+
+
+/* SELECT */
+
+.handymail_field, handymail_form select {
+    background: #fff;
+    font-size: .75rem;
+    padding: .75rem;
+    border-radius: 0.1875rem;
+    color: #979797;
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.handymail_form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.handymail_form select::after {
+    content: "ha";
+    color: black;
+    display: inline-block;
+}
+/* -- */
+
+
+
+/* RADIO */
+
+.handymail_radio {
+    display: block;
+    margin-right: .25rem;
+}
+
+.handymail_radio input {
+    margin-right: .25rem;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+
+.handymail_radio input::before {
+    content: "";
+    display: block;
+    outline: none;
+    position: relative;
+    top: .4rem;
+    z-index: 0;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+}
+
+.handymail_radio input:checked::before {
+    content: "";
+    display: block;
+    outline: none;
+    position: relative;
+    top: .4rem;
+    z-index: 0;
+    background: #4183d7;
+    background-clip: content-box;
+    border-radius: 50%;
+    border: 2px solid #4183d7;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* CHECKBOX */
+
+.handymail_checkbox {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.handymail_checkbox input {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-right: .5rem;
+}
+
+.handymail_checkbox input::before {
+    content: "";
+    display: block;
+    outline: none;
+    position: relative;
+    top: .4rem;
+    z-index: 0;
+    background: #fff;
+    border-radius: 0.1875rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+}
+
+.handymail_checkbox input:checked::before {
+    content: "";
+    display: block;
+    outline: none;
+    position: relative;
+    top: .4rem;
+    z-index: 0;
+    background: #4183d7;
+    background-clip: content-box;
+    border-radius: 0.1875rem;
+    border: 2px solid #4183d7;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* FIELD BLOCK END */
+
+.handymail_submit {
+    -webkit-appearance: button;
+    margin-bottom: 1.777rem;
+    cursor: pointer;
+    background: #2ecc71;
+    border: #2ecc71 .125rem solid;
+    border-radius: 0.1875rem;
+    padding: 1rem;
+    color: white;
+    float: right;
+    clear: both;
+    font-weight: bold;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.handymail_submit:hover {
+    background: none;
+    color: #2ecc71;
+    border: #2ecc71 .125rem solid;
+}
+
+/* ERROR REPORTS AND MESSAGES */
+
+.handymail_feedback {
+    display: block;
+    font-weight: bold;
+    margin-top: .5rem;
+    color: #f64747;
+}
+
+.handymail_form_error, .handymail_form_process, .handymail_form_success {
+    padding: 1rem;
+    color: white;
+    border-radius: 0.1875rem;
+    margin: 0;
+    margin-bottom: 2.369rem ;
+}
+
+.handymail_form_error {
+    background: #f64747;
+}
+.handymail_form_error::before {
+    content: "Whoops!";
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.handymail_form_process {
+    background: #f7941d;
+}
+
+.handymail_form_process::before {
+    content: "Processing...";
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.handymail_form_success {
+    background: #2ecc71;
+}
+
+.handymail_form_success::before {
+    content: "Success!";
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: #fff;
+    font-size: 1rem;
+}
