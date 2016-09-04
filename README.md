@@ -1,7 +1,7 @@
 ![logo](http://firewind.co.uk/handymail/assets/images/logo.png)
 
 
-[HandyMail](http://firewind.co.uk/handymail) is a flexible PHP form script that allows you quickly to generate functional, and back-end
+[HandyMail](http://firewind.co.uk/handymail) is a flexible PHP form script that allows you quickly to generate functional, back-end
 validated forms for your website without too much hassle. 
 
 HandyMail requires PHP version 5.5+. Check yoself before you wreck yoself with ```phpinfo();```.
@@ -9,10 +9,10 @@ HandyMail requires PHP version 5.5+. Check yoself before you wreck yoself with `
 <h2 id="features">Features</h2>
 
 - Create a variety of dynamic forms without writing too much code.
-- Built in back-end validation
-- Use of AJAX technology with JSON for dynamic processing
-- Utilizes the powerful [PHPMailer] (https://github.com/PHPMailer/PHPMailer) library for sending mail
-- Easy SMTP and Google ReCaptcha setup
+- Built in back-end validation & filters.
+- Use of AJAX technology with JSON for dynamic processing.
+- Utilizes the powerful [PHPMailer] (https://github.com/PHPMailer/PHPMailer) library for sending mail.
+- Easy SMTP and Google ReCaptcha setup.
 - Fully customizeable -> Supports raw HTML output & custom stylesheet selectors.
 - Does your site use bootstrap? Quickly apply bootstrap classes to your forms with a single line of code.
 - Packed with clean email template for sending organised form submissions.
@@ -77,7 +77,7 @@ Create a file called ```contact.php``` in your root folder.
         $form->xss_rescue(); // Sanitize inputs
         list($success, $data) = $form->run_validation();
         if($success) {
-          // Prepare and send mail - first parameter is TO, second is prefix of FROM [admin]@yourserver.com
+	  // Replace recipient@site.tld with TO email and admin with prefix of FROM email ie [admin]@yoursite.com
           $form->prepare_mail("recipient@site.tld", "admin");
           // Return an array of errors. If blank, $errors will be blank too.
           $errors = $form->send_mail();
