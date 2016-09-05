@@ -212,7 +212,7 @@ class Handymail {
      * @access private
      */
     private $error_class = array(
-        "field_group" => "", 
+        "fieldbox" => "", 
         "field_label" => "", 
         "field_feedback" => ""
     );
@@ -811,7 +811,7 @@ class Handymail {
     
     /**
      * Assign new classes to the $error_class property. Merges with the default array.
-     * @param array $params Parseable keys: "field_group", "field_label", "field_feedback".
+     * @param array $params Parseable keys: "fieldbox", "field_label", "field_feedback".
      * @return null
      */
     public function set_error_classes($params) {
@@ -856,7 +856,7 @@ class Handymail {
                     "radio" => "radio"
                 ));
                 $this->error_class = array_merge($this->error_class, array(
-                    "field_group" => "has-error", 
+                    "fieldbox" => "has-error", 
                     "field_feedback" => "help-block"
                 ));
                 $this->alert_class = array_merge($this->error_class, array(
@@ -878,7 +878,7 @@ class Handymail {
                     "radio" => "handymail_radio"
                 ));
                 $this->error_class = array_merge($this->error_class, array(
-                    "field_group" => "handymail_hasError", 
+                    "fieldbox" => "handymail_hasError", 
                     "field_label" => "", 
                     "field_feedback" => "handymail_feedback"
                 ));
@@ -900,7 +900,7 @@ class Handymail {
     public function get_selectors() {
         $prop = array(
             "error" => array(
-                "fieldGroup" => $this->error_class["field_group"],
+                "fieldGroup" => $this->error_class["fieldbox"],
                 "fieldFeedback" => $this->error_class["field_feedback"],
                 "fieldLabel" => $this->error_class["field_label"]
             ),
