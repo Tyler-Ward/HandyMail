@@ -51,7 +51,7 @@ class Handymail_Secure {
             }
         }
         if (Handymail::$xss) {
-            return self::nl2br_recursive(self::escape_html(self::strip_html(self::trim_input($input))));
+            return self::escape_html(self::strip_html(self::trim_input($input)));
         }
         return $input;
     }
