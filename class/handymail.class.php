@@ -658,11 +658,13 @@ class Handymail {
      * This is the only method you should run to validate inputs. Automatically checks the global $_POST array for the submitted form.
      * If form validation passes, the method applies filters and appends the filtered values to their corresponding field ids defined within
      * the $fieldsets property. 
-     * If applicable, additionally populates $email_params["reply_to"] with email fields having an active "reply_to" parameter.
-     * @return array An array tuple containing ($boolean, $data). If $boolean is false, $data is an array of encountered errors. If $boolean
-     *               is true, $data returns the $fieldsets property for arbirary use.
+     * If applicable, additionally populates $email_params["reply_to"] with email fields having an active "reply_to" parameter.g
+     * @param boolean $semantic If true, returns an array of fieldsets containing the field submissions. If false this returns
+     *                          a simple array containing [$field_id] => $value.
+     * @return array An array tuple containing ($boolean, $data). If $boolean is false, $data is an array of encountered errors.
+     *               If $boolean is true, $data returns the validated and filtered submissions in a format dependent on $semantic.
      */
-    public function run_validation() {
+    public function run_validation($semantic = false) {
         $errors = array_merge($this->valid_signature($_POST), $this->authenticate_fields($_POST), $this->forbidden_keyword_check($_POST));
         if(empty($errors)) {
             // Check validation
@@ -685,12 +687,15 @@ class Handymail {
                     $fieldset = $this->fields[$id]->fieldset;
                     // Assign filtered values to fields in the fieldset ID.
                     $this->fieldsets[$fieldset]["fields"][$id] = array("label" => $this->fields[$id]->label, "value" => $input);
+                    if(!$semantic) {
+                        $fields[$id] = $input;
+                    }
                     // If email with reply_to, insert into 
                     if($this->fields[$id]->reply_to && $this->fields[$id]->type == "email") {
                         $this->email_params["reply_to"][] = $input;
                     }
                 }
-                return array(true, $this->fieldsets);
+                return ($semantic) ? array(true, $this->fieldsets): array(true, $fields);
             }
             else {
                 return array(false, $errors);
