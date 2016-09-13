@@ -487,13 +487,13 @@ class Handymail {
     /**
      * Setter method for the forbidden keywords property.
      * 
-     * Forbidden keywords need to be delimited with "|".
+     * Forbidden keywords need to be delimited with ",".
      * @param string $words String of delimited forbidden words which will be 
      *                      appended to the current blacklist array.
      * @return null
      */
     public function set_forbidden_keywords($words) {
-        $this->forbidden_keywords = array_merge($this->forbidden_keywords, explode("|", $words));
+        $this->forbidden_keywords = array_merge($this->forbidden_keywords, explode(",", $words));
     }
     
     
