@@ -112,13 +112,7 @@ Create a file called ```contact.php``` in your root folder.
 
 
 <h2 id="documentation">Documentation</h2>
-The [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki) is a useful resource that covers important topics to facilitate its usage. You may skip right ahead to certain topics below:
-- [Creating your first form fields]()
-- [Using Validation & Filters]()
-- [Configuring Form Selectors]()
-- [Sending Mail]()
-- [SMTP setup]()
-- [Google ReCaptcha setup]()
+The [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki) is a useful resource that covers important topics to facilitate its usage. 
 
 Computer-generated documentation provided by PHPDocumentor is also available, please visit [HandyDocs](http://onebadninja.github.io/handymail/docs/)
 
