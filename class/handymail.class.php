@@ -403,7 +403,7 @@ class Handymail {
     /**
      * Generates HTML for the form and returns it. Utilizes the $fields and $fieldsets properties to create the corresponding inputs.
      * @param boolean $html_display If true, this returns the HTML code of the form in <pre> tags for further customization.
-     * @return str The form HTML code, wrapped in <pre> tags if $html_display is set to boolean true.
+     * @return string The form HTML code, wrapped in <pre> tags if $html_display is set to boolean true.
      */
     public function generate($html_display = false) {
         // Check if fields have been created.
