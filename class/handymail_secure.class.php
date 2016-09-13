@@ -121,12 +121,41 @@ class Handymail_Secure {
                         return $errors;
                     }
                     break;
+                // Match forbidden keywords
+                case (preg_match("/^forbidden\{[A-Za-z0-9_\-, :<>]+\}$/", $rule)):
+                    preg_match("/(?<=\{)[A-Za-z0-9_\-, :<>]+(?=\})/", $rule, $keys);
+                    $keys = explode(",", $keys[0]);
+                    // If matches exist, then throw error.
+                    if($matches = self::forbidden($input, $keys)) {
+                        $errors[$field->id] = "Field contains the following forbidden keywords: (" . implode(", ", $matches) . ")";
+                    }
+                    return $errors;
+                    break;
             }  
         }
         return $errors;
     }
-    
-    
+
+
+    /**
+     * Recursively checks for forbidden keywords in supplied input.
+     * @param string|array $input The submitted field input.
+     * @param array $keys An array of forbidden keywords.
+     * @return boolean If false, no forbidden keywords found - otherwise returns an array of 
+     * forbidden keywords (evaluating to boolean true). **IMPORTANT** that false is good here.
+     */
+    static private function forbidden($input, $keys) {
+        $input = serialize($input);
+        $culprits = array();
+        foreach($keys as $key) {
+            if (strpos($input, $key) !== FALSE) {
+                $culprits[] = $key;
+            }
+        }
+        return (!empty($culprits)) ? $culprits : false;
+    }
+
+
     /**
      * Recursively hashes the submitted input.
      * @param string|array $input The submitted field input.

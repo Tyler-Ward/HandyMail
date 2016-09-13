@@ -501,7 +501,7 @@ class Handymail {
      * Setter method for the validation rules property.
      * 
      * The full list of available rules is as follows:
-     * "required|numeric|alphanumeric|limit{x}|valid_email|match{x}"
+     * "required|numeric|alphanumeric|limit{x}|valid_email|match{x}|forbidden{x,y,z}"
      * These are all applied recursively regardless of whether the input is an array or not.
      * @param array $rules The array of rules with keys corresponding to field IDs.
      *                     Each field ID corresponds to a string of rules delimited
@@ -513,6 +513,7 @@ class Handymail {
             exit("Method set_validation requires input argument to be an array.");
         }
         foreach($rule_array as $field_id => $rules) {
+            // If field ID doesn't exist, throw error.
             if(!array_key_exists(self::$input_prefix . $field_id, $this->fields)) {
                 exit("Field with id $field_id does not exist. Cannot set validation for it.");
             }
