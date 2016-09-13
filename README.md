@@ -120,7 +120,7 @@ The [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki) is a useful 
 - [SMTP setup]()
 - [Google ReCaptcha setup]()
 
-Computer-generated documentation provided by PHPDocumentor is also available, please visit [HandyDocs](onebadninja.github.io/handymail)
+Computer-generated documentation provided by PHPDocumentor is also available, please visit [HandyDocs](http://onebadninja.github.io/handymail/docs/)
 
 <h2 id="contribute">Contribute</h2>
 You may contribute any improvements and fixes via regular pull-requests. These will be reviewed as per standard procedure before integration.
