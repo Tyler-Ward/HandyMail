@@ -130,4 +130,4 @@ Alternatively you may visit http://www.gnu.org/copyleft/lesser.html
 
 ## Authors
 
-**I.G Laghidze** (Founder) - developer@firewind.co.uk
+**I.G Laghidze** (Founder) - developer@artisan-one.com
