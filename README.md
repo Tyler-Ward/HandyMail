@@ -1,4 +1,4 @@
-![logo](http://firewind.co.uk/handymail/assets/images/logo.png)
+![logo](http://artisan-one.com/handymail/assets/images/logo.png)
 
 
 [HandyMail](http://firewind.co.uk/handymail) is a flexible PHP form script that allows you quickly to generate functional, back-end
@@ -17,10 +17,12 @@ HandyMail requires PHP version 5.5+. Check yoself before you wreck yoself with `
 - Does your site use bootstrap? Quickly apply bootstrap classes to your forms with a single line of code.
 - Packed with clean email template for sending organised form submissions.
 
-View a demonstration of forms generated via HandyMail @ [HandyMail V1.0 Demo](http://firewind.co.uk/handymail).
+View a demonstration of forms generated via HandyMail @ [HandyMail V1.0 Demo](http://artisan-one.com/handymail).
 
-<h2 id="start">Getting started</h2>
+## Getting started
+
 #### Installation
+
 Download the _HandyMail-master.zip_ file and unzip into your root directory. For the sake of this demonstration, assume we rename the unzipped folder to _handymail_.
 
 #### Basic Setup
@@ -48,7 +50,7 @@ If you want to use the default handymail stylesheet, add the following too:
 
 To learn how to create your forms, proceed to the [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki)
 
-<h2 id="example">Example usage: A basic contact form page</h2>
+##Example usage: A basic contact form page
 
 Create a file called ```contact.php``` in your root folder.
 
@@ -111,17 +113,17 @@ Create a file called ```contact.php``` in your root folder.
 ```
 
 
-<h2 id="documentation">Documentation</h2>
+##Documentation
 The [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki) is a useful resource that covers important topics to facilitate its usage. 
 
 Computer-generated documentation provided by PHPDocumentor is also available, please visit [HandyDocs](http://onebadninja.github.io/handymail/docs/)
 
-<h2 id="contribute">Contribute</h2>
+##Contribute
 You may contribute any improvements and fixes via regular pull-requests. These will be reviewed as per standard procedure before integration.
 
-<h2 id="license">License</h2>
+##License
 HandyMail is licensed under the GNU Lesser General Public License (LGPL) - see the LICENSE.md file for details.
-Alternatively you may visit [http://www.gnu.org/copyleft/lesser.html](http://www.gnu.org/copyleft/lesser.html)
+Alternatively you may visit [GNU LGPL](http://www.gnu.org/copyleft/lesser.html)
 
-<h2 id="contact">Authors</h2>
+##Authors
 **I.G Laghidze** (Founder) - developer@firewind.co.uk
