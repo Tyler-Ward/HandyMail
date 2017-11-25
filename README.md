@@ -6,12 +6,12 @@ validated forms for your website without too much hassle.
 
 HandyMail requires PHP version 5.5+. Check yoself before you wreck yoself with ```phpinfo();```.
 
-<h2 id="features">Features</h2>
+## Features
 
 - Create a variety of dynamic forms without writing too much code.
 - Built in back-end validation & filters.
 - Use of AJAX technology with JSON for dynamic processing.
-- Utilizes the powerful [PHPMailer] (https://github.com/PHPMailer/PHPMailer) library for sending mail.
+- Utilizes the powerful [PHPMailer](https://github.com/PHPMailer/PHPMailer) library for sending mail.
 - Easy SMTP and Google ReCaptcha setup.
 - Fully customizeable -> Supports raw HTML output & custom stylesheet selectors.
 - Does your site use bootstrap? Quickly apply bootstrap classes to your forms with a single line of code.
@@ -50,7 +50,7 @@ If you want to use the default handymail stylesheet, add the following too:
 
 To learn how to create your forms, proceed to the [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki)
 
-##Example usage: A basic contact form page
+## Example usage: A basic contact form page
 
 Create a file called ```contact.php``` in your root folder.
 
@@ -113,17 +113,21 @@ Create a file called ```contact.php``` in your root folder.
 ```
 
 
-##Documentation
+## Documentation
+
 The [HandyMail wiki](https://github.com/OneBadNinja/HandyMail/wiki) is a useful resource that covers important topics to facilitate its usage. 
 
 Computer-generated documentation provided by PHPDocumentor is also available, please visit [HandyDocs](http://onebadninja.github.io/handymail/docs/)
 
-##Contribute
+## Contribute
+
 You may contribute any improvements and fixes via regular pull-requests. These will be reviewed as per standard procedure before integration.
 
-##License
-HandyMail is licensed under the GNU Lesser General Public License (LGPL) - see the LICENSE.md file for details.
-Alternatively you may visit [GNU LGPL](http://www.gnu.org/copyleft/lesser.html)
+## License
 
-##Authors
+HandyMail is licensed under the GNU Lesser General Public License (LGPL) - see the LICENSE.md file for details.
+Alternatively you may visit http://www.gnu.org/copyleft/lesser.html
+
+## Authors
+
 **I.G Laghidze** (Founder) - developer@firewind.co.uk
