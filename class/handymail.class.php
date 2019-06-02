@@ -776,13 +776,15 @@ class Handymail {
             if($this->use_smtp) {
                 require(rtrim(dirname(__FILE__), "class") . "/libraries/phpmailer/class.smtp.php");
                 $mail->IsSMTP();
-                $mail->SMTPAuth = true;
                 $mail->SMTPDebug = $this->smtp["SMTPDebug"];
                 $mail->SMTPSecure = $this->smtp["SMTPSecure"];
                 $mail->Host = $this->smtp["Host"];
                 $mail->Port = $this->smtp["Port"];
-                $mail->Username = $this->smtp["Username"];
-                $mail->Password = $this->smtp["Password"];
+                if isset($this->smtp["Username"]) {
+                    $mail->SMTPAuth = true;
+                    $mail->Username = $this->smtp["Username"];
+                    $mail->Password = $this->smtp["Password"];
+                }
             }
             // Proceed with assigning properties.
             // Reply Tos if they exist.
